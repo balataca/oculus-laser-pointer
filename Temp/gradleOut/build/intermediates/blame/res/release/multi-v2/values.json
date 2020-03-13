@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/augusto/unity_projects/unity3d-oculus-pointer/Temp/gradleOut/build/intermediates/incremental/mergeReleaseResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/augusto/unity_projects/unity3d-oculus-pointer/Temp/gradleOut/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "5,2,7",
+                        "startColumns": "0,0,0",
+                        "startOffsets": "190,53,288",
+                        "endLines": "6,4,10",
+                        "endColumns": "8,8,8",
+                        "endOffsets": "286,188,513"
+                    },
+                    "to": {
+                        "startLines": "5,7,10",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "215,315,453",
+                        "endLines": "6,9,13",
+                        "endColumns": "8,8,8",
+                        "endOffsets": "310,448,675"
+                    }
+                },
+                {
+                    "source": "/home/augusto/unity_projects/unity3d-oculus-pointer/Temp/gradleOut/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "2,2",
+                        "startOffsets": "53,99",
+                        "endColumns": "45,65",
+                        "endOffsets": "96,162"
+                    },
+                    "to": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,103",
+                        "endColumns": "47,67",
+                        "endOffsets": "98,166"
+                    }
+                },
+                {
+                    "source": "/home/augusto/.gradle/caches/transforms-2/files-2.1/ef6c6a406d2390084292c981f00aae79/res/values/values.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "2",
+                        "startOffsets": "53",
+                        "endColumns": "41",
+                        "endOffsets": "92"
+                    },
+                    "to": {
+                        "startLines": "4",
+                        "startColumns": "4",
+                        "startOffsets": "171",
+                        "endColumns": "43",
+                        "endOffsets": "210"
+                    }
+                }
+            ]
+        }
+    ]
+}

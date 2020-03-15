@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{54F856F2-4059-D67E-8B02-E0CA989807A2}</ProjectGuid>
+    <ProjectGuid>{B8434CA2-D03E-2554-7845-41D680D4A0AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,26 +53,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Pointer\Scripts\PointerEvents.cs" />
-     <Compile Include="Assets\Pointer\Scripts\Pointers\CanvasPointer.cs" />
-     <Compile Include="Assets\Pointer\Scripts\Pointers\PhysicsPointer.cs" />
-     <Compile Include="Assets\Pointer\Scripts\Pointers\Pointer.cs" />
-     <Compile Include="Assets\Pointer\Scripts\Pointers\Reticle.cs" />
+     <Compile Include="Assets\Pointer\Scripts\ButtonEvents.cs" />
+     <Compile Include="Assets\Pointer\Scripts\Pointer.cs" />
+     <Compile Include="Assets\Pointer\Scripts\Reticle.cs" />
      <Compile Include="Assets\Pointer\Scripts\VRInput.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/home/augusto/unity_projects/VR Pointer/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/home/augusto/unity_projects/unity3d-oculus-pointer/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/home/augusto/unity_projects/VR Pointer/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/home/augusto/unity_projects/unity3d-oculus-pointer/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>/home/augusto/unity_projects/VR Pointer/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>/home/augusto/unity_projects/unity3d-oculus-pointer/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/home/augusto/unity_projects/VR Pointer/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/home/augusto/unity_projects/unity3d-oculus-pointer/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.DataPrivacy">
- <HintPath>/home/augusto/unity_projects/VR Pointer/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+ <HintPath>/home/augusto/unity_projects/unity3d-oculus-pointer/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/home/augusto/Unity/Hub/Editor/2018.4.14f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -273,13 +271,13 @@
  <HintPath>/home/augusto/Unity/Hub/Editor/2018.4.14f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Editor">
- <HintPath>/home/augusto/unity_projects/VR Pointer/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+ <HintPath>/home/augusto/unity_projects/unity3d-oculus-pointer/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.StandardEvents">
- <HintPath>/home/augusto/unity_projects/VR Pointer/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+ <HintPath>/home/augusto/unity_projects/unity3d-oculus-pointer/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Analytics.Tracker">
- <HintPath>/home/augusto/unity_projects/VR Pointer/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+ <HintPath>/home/augusto/unity_projects/unity3d-oculus-pointer/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/home/augusto/Unity/Hub/Editor/2018.4.14f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -629,11 +627,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Oculus.VR.Editor.csproj">
-      <Project>{FB5E00C2-0499-E446-E0D4-17674B96BAF9}</Project>      <Name>Oculus.VR.Editor</Name>    </ProjectReference>
+      <Project>{E1B014B3-218A-2A8D-A127-39762E91A9B4}</Project>      <Name>Oculus.VR.Editor</Name>    </ProjectReference>
     <ProjectReference Include="Oculus.VR.Scripts.Editor.csproj">
-      <Project>{59568275-286E-C4B5-AC74-0AD96200D0EF}</Project>      <Name>Oculus.VR.Scripts.Editor</Name>    </ProjectReference>
+      <Project>{52728EE1-E008-DE5D-FC89-BFEBEB665FDF}</Project>      <Name>Oculus.VR.Scripts.Editor</Name>    </ProjectReference>
     <ProjectReference Include="Oculus.VR.csproj">
-      <Project>{69C3DC3B-E8E5-535E-0184-B259B3FAC8ED}</Project>      <Name>Oculus.VR</Name>    </ProjectReference>
+      <Project>{0A0C2891-E5EC-6773-EC65-02841FFBD5BE}</Project>      <Name>Oculus.VR</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

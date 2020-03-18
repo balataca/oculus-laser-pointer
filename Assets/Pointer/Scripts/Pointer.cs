@@ -10,7 +10,7 @@ public class Pointer : MonoBehaviour
     public EventSystem eventSystem = null;
     public StandaloneInputModule inputModule = null;
 
-    public LayerMask layerMask;
+    public LayerMask interactableMask;
     [HideInInspector]
     public Vector3 endPosition;
     [HideInInspector]
@@ -36,26 +36,19 @@ public class Pointer : MonoBehaviour
 
     private Vector3 GetEnd()
     {
-        float distance = GetCanvasDistance();
-        RaycastHit hit = CreateForwardRaycast();
-        endPosition = CalculateEnd(defaultLength);
         hasCollided = false;
+        float distance = GetDistance();
+        endPosition = CalculateEnd(defaultLength);
         
-        if (hit.collider)
-        {
-            endPosition = hit.point;
-            hasCollided = true;
-        }
-        else if (distance != 0.0f)
+        if (distance != 0.0f)
         {
             endPosition = CalculateEnd(distance);
-            hasCollided = true;
         }
 
         return endPosition;
     }
 
-    private float GetCanvasDistance()
+    private float GetDistance()
     {
         PointerEventData eventData = new PointerEventData(eventSystem);
         List<RaycastResult> results = new List<RaycastResult>();
@@ -84,16 +77,6 @@ public class Pointer : MonoBehaviour
         }
 
         return new RaycastResult();
-    }
-
-    private RaycastHit CreateForwardRaycast()
-    {
-        RaycastHit hit;
-        Ray ray = new Ray(transform.position, transform.forward);
-
-        Physics.Raycast(ray, out hit, defaultLength, layerMask);
-
-        return hit;
     }
 
     private Vector3 CalculateEnd(float length)

@@ -93,7 +93,7 @@ abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.Tou
 2a190070f6cdfa268969e6612ffdf745 Oculus.VR.dll:.OVRMixedRealityCaptureTest
 c51d2a1569bb404a12e837742887b609 Oculus.VR.dll:.OVRPlayerController
 558b301491aa906446760eed78a170c5 Oculus.VR.dll:.OVRAudioSourceTest
-fd9c5bf80986f1ec42b662e4e7bb7382 Assembly-CSharp.dll:.Pointer
+70b064a8838b21b274437589eb705481 Assembly-CSharp.dll:.Pointer
 6adf0680d8d7e110dab1c5470b12851b Oculus.VR.dll:.OVRProfiler
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack

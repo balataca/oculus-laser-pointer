@@ -12,7 +12,7 @@ public class Reticle : MonoBehaviour
 
     private void Update()
     {
-        UpdateSprite(pointer.endPosition, pointer.hasCollided);
+        pointer.OnPointerUpdate += UpdateSprite;
     }
 
     private void UpdateSprite(Vector3 position, bool hit)
@@ -27,5 +27,10 @@ public class Reticle : MonoBehaviour
         {
             circleRenderer.sprite = openSprite;
         }
+    }
+
+    private void OnDestroy()
+    {
+        pointer.OnPointerUpdate -= UpdateSprite;
     }
 }

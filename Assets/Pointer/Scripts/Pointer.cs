@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
 public class Pointer : MonoBehaviour
 {
@@ -9,14 +10,11 @@ public class Pointer : MonoBehaviour
   
     public EventSystem eventSystem = null;
     public StandaloneInputModule inputModule = null;
-
-    public LayerMask interactableMask;
-    [HideInInspector]
-    public Vector3 endPosition;
-    [HideInInspector]
-    public bool hasCollided = false;
+    public LayerMask interactableMask = 0;
+    public UnityAction<Vector3, bool> OnPointerUpdate = null;
 
     private LineRenderer lineRenderer = null;
+    private GameObject currentObject = null;
 
     private void Awake()
     {
@@ -25,26 +23,38 @@ public class Pointer : MonoBehaviour
 
     private void Update()
     {
-        UpdateLength();
+        UpdatePointer();
     }
 
-    private void UpdateLength()
+    private void UpdatePointer()
     {
+        Vector3 endPosition = GetEnd();
+
+        UpdatePointerStatus(endPosition);
+        
         lineRenderer.SetPosition(0, transform.position);
-        lineRenderer.SetPosition(1, GetEnd());
+        lineRenderer.SetPosition(1, endPosition);
+    }
+
+    private void UpdatePointerStatus(Vector3 hitPoint)
+    {
+        bool hit = false;
+    
+        if (currentObject != null)
+            hit = interactableMask == (interactableMask | (1 << currentObject.layer));
+        
+        if (OnPointerUpdate != null)
+            OnPointerUpdate(hitPoint, hit);
     }
 
     private Vector3 GetEnd()
     {
-        hasCollided = false;
         float distance = GetDistance();
-        endPosition = CalculateEnd(defaultLength);
+        Vector3 endPosition = CalculateEnd(defaultLength);
         
         if (distance != 0.0f)
-        {
             endPosition = CalculateEnd(distance);
-        }
-
+      
         return endPosition;
     }
 
@@ -58,6 +68,7 @@ public class Pointer : MonoBehaviour
 
         RaycastResult closestResult = FindFirstRaycast(results);
         float distance = closestResult.distance;
+        currentObject = closestResult.gameObject;
 
         distance = Mathf.Clamp(distance, 0.0f, defaultLength);
 
@@ -69,10 +80,8 @@ public class Pointer : MonoBehaviour
         foreach (RaycastResult result in results)
         {
             if (!result.gameObject)
-            {
                 continue;
-            }
-
+            
             return result;
         }
 
@@ -81,6 +90,6 @@ public class Pointer : MonoBehaviour
 
     private Vector3 CalculateEnd(float length)
     {
-        return transform.position + (transform.forward * length);
+        return transform.position + transform.forward * length;
     }
 }

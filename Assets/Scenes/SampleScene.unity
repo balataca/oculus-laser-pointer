@@ -1495,17 +1495,17 @@ PrefabInstance:
         type: 3}
       propertyPath: leftControllerAnchor
       value: 
-      objectReference: {fileID: 1983322537141602}
+      objectReference: {fileID: 4593682212300770}
     - target: {fileID: 5598747804572182908, guid: 4436dcb3875416af89ca7ae7e661e69c,
         type: 3}
       propertyPath: rightControllerAnchor
       value: 
-      objectReference: {fileID: 1054113433936308}
+      objectReference: {fileID: 4484590484062298}
     - target: {fileID: 5598747804572182908, guid: 4436dcb3875416af89ca7ae7e661e69c,
         type: 3}
       propertyPath: centerEyeAnchor
       value: 
-      objectReference: {fileID: 1591385272}
+      objectReference: {fileID: 1591541912}
     - target: {fileID: 5598747804572182908, guid: 4436dcb3875416af89ca7ae7e661e69c,
         type: 3}
       propertyPath: eventCamera

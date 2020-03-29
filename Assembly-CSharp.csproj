@@ -53,7 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Pointer\Scripts\ButtonEvents.cs" />
+     <Compile Include="Assets\Pointer\Scripts\Interactable.cs" />
      <Compile Include="Assets\Pointer\Scripts\Pointer.cs" />
      <Compile Include="Assets\Pointer\Scripts\Reticle.cs" />
      <Compile Include="Assets\Pointer\Scripts\VRInput.cs" />

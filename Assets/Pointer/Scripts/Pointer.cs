@@ -7,18 +7,36 @@ using UnityEngine.Events;
 public class Pointer : MonoBehaviour
 {
     public float defaultLength = 3.0f;
-  
+
     public EventSystem eventSystem = null;
-    public StandaloneInputModule inputModule = null;
+    public StandaloneInputModule inputModule = null;    
+    public VRInput VRInput = null;
     public LayerMask interactableMask = 0;
     public UnityAction<Vector3, bool> OnPointerUpdate = null;
-
+ 
     private LineRenderer lineRenderer = null;
     private GameObject currentObject = null;
 
     private void Awake()
     {
         lineRenderer = GetComponent<LineRenderer>();
+        
+        VRInput.OnControllerSource += UpdateOrigin;
+    }
+
+    private void OnDestroy()
+    {
+        VRInput.OnControllerSource += UpdateOrigin;
+    }
+
+    private void UpdateOrigin(OVRInput.Controller controller, GameObject controllerAnchor)
+    {
+        transform.SetParent(controllerAnchor.transform);
+        
+        if (controller == OVRInput.Controller.Touchpad)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     private void Update()
@@ -30,8 +48,12 @@ public class Pointer : MonoBehaviour
     {
         Vector3 endPosition = GetEnd();
 
+        UpdateLength(endPosition);
         UpdatePointerStatus(endPosition);
-        
+    }
+
+    private void UpdateLength(Vector3 endPosition)
+    {
         lineRenderer.SetPosition(0, transform.position);
         lineRenderer.SetPosition(1, endPosition);
     }

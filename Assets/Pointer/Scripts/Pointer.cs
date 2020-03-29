@@ -29,13 +29,18 @@ public class Pointer : MonoBehaviour
         VRInput.OnControllerSource += UpdateOrigin;
     }
 
-    private void UpdateOrigin(OVRInput.Controller controller, GameObject controllerAnchor)
+    private void UpdateOrigin(OVRInput.Controller controller, Transform controllerAnchor)
     {
-        transform.SetParent(controllerAnchor.transform);
+        transform.SetParent(controllerAnchor);
         
-        if (controller == OVRInput.Controller.Touchpad)
+        if (controller == OVRInput.Controller.None ||
+            controller == OVRInput.Controller.Touchpad)
         {
-            gameObject.SetActive(false);
+            lineRenderer.enabled = false;
+        }
+        else
+        {
+            lineRenderer.enabled = true;
         }
     }
 

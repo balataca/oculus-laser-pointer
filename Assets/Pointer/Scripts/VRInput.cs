@@ -7,15 +7,15 @@ using UnityEngine.Events;
 public class VRInput : BaseInput
 {
     [Tooltip("OVRCamera Anchors")]
-    public GameObject leftControllerAnchor;
-    public GameObject rightControllerAnchor;
-    public GameObject centerEyeAnchor;
+    public Transform leftControllerAnchor;
+    public Transform rightControllerAnchor;
+    public Transform centerEyeAnchor;
 
     public Camera eventCamera = null;
     public OVRInput.Button clickButton = OVRInput.Button.PrimaryIndexTrigger;
-    public static UnityAction<OVRInput.Controller, GameObject> OnControllerSource = null;
+    public static UnityAction<OVRInput.Controller, Transform> OnControllerSource = null;
 
-    private Dictionary<OVRInput.Controller, GameObject> controllerCollection = null;
+    private Dictionary<OVRInput.Controller, Transform> controllerCollection = null;
     private OVRInput.Controller controller = OVRInput.Controller.None;
     
     protected override void Awake()
@@ -32,19 +32,21 @@ public class VRInput : BaseInput
     {
         OVRInput.Controller activeController = OVRInput.GetActiveController();
         
-        if (activeController == controller)
-            return;
-
         controller = activeController;
         
-        GameObject controllerAnchor = null;
+        if (OnControllerSource != null)
+            OnControllerSource(controller, GetControllerAnchor());
+    }
+
+    private Transform GetControllerAnchor()
+    {
+        Transform controllerAnchor = null;
         controllerCollection.TryGetValue(controller, out controllerAnchor);
 
         if (controllerAnchor == null)
             controllerAnchor = centerEyeAnchor;
-    
-        if (OnControllerSource != null)
-            OnControllerSource(controller, controllerAnchor);
+
+        return controllerAnchor;
     }
 
     public override bool GetMouseButton(int button)
@@ -70,9 +72,9 @@ public class VRInput : BaseInput
         }
     }
 
-    private Dictionary<OVRInput.Controller, GameObject> CreateControllerCollection()
+    private Dictionary<OVRInput.Controller, Transform> CreateControllerCollection()
     {
-        return new Dictionary<OVRInput.Controller, GameObject>()
+        return new Dictionary<OVRInput.Controller, Transform>()
         {
             { OVRInput.Controller.LTrackedRemote, leftControllerAnchor },
             { OVRInput.Controller.RTrackedRemote, rightControllerAnchor },

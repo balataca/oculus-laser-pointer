@@ -326,6 +326,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 8b0b574056d029464935adb0fb1027fd,
         type: 3}
+    - target: {fileID: 6878543887441223303, guid: d75aaa6eb262033e8a3d57678e09ff56,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d75aaa6eb262033e8a3d57678e09ff56, type: 3}
 --- !u!20 &1236136418 stripped
@@ -589,6 +594,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4133352331511806, guid: ace7b11c0c5eb744a96b3eb4238934c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714676544275212, guid: ace7b11c0c5eb744a96b3eb4238934c1,
+        type: 3}
+      propertyPath: normalColor.r
+      value: 0.9019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714676544275212, guid: ace7b11c0c5eb744a96b3eb4238934c1,
+        type: 3}
+      propertyPath: normalColor.g
+      value: 0.33725488
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714676544275212, guid: ace7b11c0c5eb744a96b3eb4238934c1,
+        type: 3}
+      propertyPath: normalColor.b
+      value: 0.47843128
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714676544275212, guid: ace7b11c0c5eb744a96b3eb4238934c1,
+        type: 3}
+      propertyPath: enterColor.r
+      value: 0.15739918
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714676544275212, guid: ace7b11c0c5eb744a96b3eb4238934c1,
+        type: 3}
+      propertyPath: enterColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714676544275212, guid: ace7b11c0c5eb744a96b3eb4238934c1,
+        type: 3}
+      propertyPath: downColor.g
+      value: 0.9217474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714676544275212, guid: ace7b11c0c5eb744a96b3eb4238934c1,
+        type: 3}
+      propertyPath: downColor.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -876,30 +916,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975630067}
   m_CullTransparentMesh: 0
---- !u!1 &2089338603 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1934893477527220, guid: ace7b11c0c5eb744a96b3eb4238934c1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1541550179}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2089338604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2089338603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fed17aac795fba74488295493a37f1bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalColor: {r: 0.9019608, g: 0.33725488, b: 0.47843128, a: 1}
-  enterColor: {r: 0.15739918, g: 0, b: 1, a: 1}
-  downColor: {r: 1, g: 0.9217474, b: 0, a: 1}
-  OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1001 &5598747804142604310
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: Assets/Examples/Scenes/PointerExample.unity
   isLoaded: 1
   isActive: 1

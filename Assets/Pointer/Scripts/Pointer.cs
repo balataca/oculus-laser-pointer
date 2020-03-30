@@ -31,7 +31,7 @@ public class Pointer : MonoBehaviour
 
     private void UpdateOrigin(OVRInput.Controller controller, Transform controllerAnchor)
     {
-        transform.SetParent(controllerAnchor);
+        transform.SetParent(controllerAnchor, false);
         
         if (controller == OVRInput.Controller.None ||
             controller == OVRInput.Controller.Touchpad)

@@ -16,7 +16,7 @@ public class VRInput : BaseInput
     public static UnityAction<OVRInput.Controller, Transform> OnControllerSource = null;
 
     private Dictionary<OVRInput.Controller, Transform> controllerCollection = null;
-    private OVRInput.Controller controller = OVRInput.Controller.None;
+    private OVRInput.Controller controller = OVRInput.Controller.All;
     
     protected override void Awake()
     {
@@ -31,6 +31,9 @@ public class VRInput : BaseInput
     private void UpdateControllerSource()
     {
         OVRInput.Controller activeController = OVRInput.GetActiveController();
+
+        if (controller == activeController)
+            return;
         
         controller = activeController;
         

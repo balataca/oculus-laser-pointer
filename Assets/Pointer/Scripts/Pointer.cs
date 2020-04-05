@@ -31,17 +31,23 @@ public class Pointer : MonoBehaviour
 
     private void UpdateOrigin(OVRInput.Controller controller, Transform controllerAnchor)
     {
+        bool hasController = controller != OVRInput.Controller.None;
+
+        switch(controller) {
+            case OVRInput.Controller.RTrackedRemote:
+            case OVRInput.Controller.LTrackedRemote:
+                lineRenderer.enabled = true;
+                break;
+            case OVRInput.Controller.Touchpad:
+                lineRenderer.enabled = false;
+                break;
+            default:
+                hasController = false;
+                break;
+        }
+
         transform.SetParent(controllerAnchor, false);
-        
-        if (controller == OVRInput.Controller.None ||
-            controller == OVRInput.Controller.Touchpad)
-        {
-            lineRenderer.enabled = false;
-        }
-        else
-        {
-            lineRenderer.enabled = true;
-        }
+        gameObject.SetActive(hasController);
     }
 
     private void Update()

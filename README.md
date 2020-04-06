@@ -2,6 +2,8 @@
 
 This project implements a laser pointer for oculus go and gearVR headsets.
 
+![Demo gif](ReadmeFiles/demo.gif)
+
 ## Installation
 
 ### Importing Unity Project
@@ -30,10 +32,5 @@ This project implements a laser pointer for oculus go and gearVR headsets.
 
 ## Usage
 
-1. Drag the example scene from Assets/Examples/Scenes/PointerExample.unity
-
-![Open the example scene screenshot](ReadmeFiles/5.png)
-
+1. Drag the example scene from `Assets/Examples/Scenes/PointerExample.unity`
 2. Build and Run on your device
-
-![Build and run screenshot](ReadmeFiles/6.png)

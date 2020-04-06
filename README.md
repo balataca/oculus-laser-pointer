@@ -1,4 +1,4 @@
-# Unity Oculus Go Laser Pointer
+# Unity Oculus Go/GearVR Laser Pointer
 
 This project implements a laser pointer for oculus go and gearVR headsets.
 

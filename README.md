@@ -1,6 +1,6 @@
 # Unity Oculus Go/GearVR Laser Pointer
 
-This project implements a laser pointer for oculus go and gearVR headsets. It is based on [VR with Andrew](https://www.youtube.com/channel/UCG8bDPqp3jykCGbx-CiL7VQ) laser pointer series.
+This project implements a laser pointer for Oculus Go and GearVR headsets. It is based on [VR with Andrew](https://www.youtube.com/channel/UCG8bDPqp3jykCGbx-CiL7VQ) laser pointer series.
 
 ![Demo gif](ReadmeFiles/demo.gif)
 
@@ -13,7 +13,7 @@ This project implements a laser pointer for oculus go and gearVR headsets. It is
 1. To create a unity VR project, first check out this [Oculus Unity Getting Started Guide](https://developer.oculus.com/documentation/unity/book-unity-gsg/)
 
 
-### Adding Pointer to Unity VR Project
+### Adding a Pointer to Unity VR Project
 1. Install the Oculus Android Package from the package manager
 
 ![Install oculus android screenshot](ReadmeFiles/1.png)
@@ -26,7 +26,7 @@ This project implements a laser pointer for oculus go and gearVR headsets. It is
 
 ![Import custom asset package screenshot](ReadmeFiles/3.png)
 
-4. Import the Unity Asset Package `oculus-laser-pointer.unitypackage` located on Releases.
+4. Import the Unity Asset Package `oculus-laser-pointer.unitypackage` located on [Releases](https://github.com/balataca/oculus-laser-pointer/releases).
 
 ![Import laser pointer package screenshot](ReadmeFiles/4.png)
 
